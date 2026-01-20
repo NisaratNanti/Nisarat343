@@ -1,0 +1,113 @@
+{
+  "movies": [
+    {
+      "movie_id": 1,
+      "title": "Batman Begins",
+      "release_year": 2005,
+      "universe": "Nolanverse",
+      "director": "Christopher Nolan",
+      "duration_min": 140,
+      "rating": 8.2,
+      "box_office": 373661946,
+      "description": "The origin story of Bruce Wayne becoming Batman.",
+      "cast": [
+        {
+          "actor_name": "Christian Bale",
+          "character_name": "Bruce Wayne / Batman",
+          "role_type": "Hero"
+        },
+        {
+          "actor_name": "Liam Neeson",
+          "character_name": "Ra's al Ghul",
+          "role_type": "Villain"
+        }
+      ],
+      "villains": [
+        {
+          "name": "Ra's al Ghul",
+          "actor": "Liam Neeson"
+        }
+      ],
+      "reviews": [
+        {
+          "source": "IMDb",
+          "score": 8.2
+        },
+        {
+          "source": "Rotten Tomatoes",
+          "score": 84
+        }
+      ]
+    },
+    {
+      "movie_id": 2,
+      "title": "The Dark Knight",
+      "release_year": 2008,
+      "universe": "Nolanverse",
+      "director": "Christopher Nolan",
+      "duration_min": 152,
+      "rating": 9.0,
+      "box_office": 1004558444,
+      "description": "Batman faces the Joker, a criminal mastermind.",
+      "cast": [
+        {
+          "actor_name": "Christian Bale",
+          "character_name": "Bruce Wayne / Batman",
+          "role_type": "Hero"
+        },
+        {
+          "actor_name": "Heath Ledger",
+          "character_name": "Joker",
+          "role_type": "Villain"
+        }
+      ],
+      "villains": [
+        {
+          "name": "Joker",
+          "actor": "Heath Ledger"
+        }
+      ],
+      "reviews": [
+        {
+          "source": "IMDb",
+          "score": 9.0
+        }
+      ]
+    },
+    {
+      "movie_id": 3,
+      "title": "The Dark Knight Rises",
+      "release_year": 2012,
+      "universe": "Nolanverse",
+      "director": "Christopher Nolan",
+      "duration_min": 165,
+      "rating": 8.4,
+      "box_office": 1081041287,
+      "description": "Batman returns to face Bane and save Gotham.",
+      "cast": [
+        {
+          "actor_name": "Christian Bale",
+          "character_name": "Bruce Wayne / Batman",
+          "role_type": "Hero"
+        },
+        {
+          "actor_name": "Tom Hardy",
+          "character_name": "Bane",
+          "role_type": "Villain"
+        }
+      ],
+      "villains": [
+        {
+          "name": "Bane",
+          "actor": "Tom Hardy"
+        }
+      ],
+      "reviews": [
+        {
+          "source": "IMDb",
+          "score": 8.4
+        }
+      ]
+    }
+  ]
+}

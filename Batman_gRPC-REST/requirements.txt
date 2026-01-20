@@ -1,0 +1,5 @@
+fastapi      # สำหรับสร้าง REST API
+uvicorn      # สำหรับรัน server ของ FastAPI
+grpcio       # สำหรับการใช้งาน gRPC
+grpcio-tools # สำหรับเครื่องมือจัดการ Proto files
+requests     # สำหรับการเรียก REST API (ใช้ใน Service C)

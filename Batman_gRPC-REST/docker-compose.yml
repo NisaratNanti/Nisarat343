@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  # Service A: ทำหน้าที่เป็นทั้ง REST และ gRPC Server
+  service_a:
+    build:
+      context: .
+      dockerfile: service_a/Dockerfile
+    ports:
+      - "8000:8000"     # REST API Port
+      - "50051:50051"   # gRPC Port
+    volumes:
+      - ./service_a:/app # เชื่อมไฟล์ในเครื่องกับไฟล์ใน Container เพื่อความสะดวกตอนพัฒนา
+    environment:
+      - PYTHONUNBUFFERED=1 # ช่วยให้เห็น log จาก Python ทันที
+
+  # Service B: ทำหน้าที่เป็น gRPC Client ของ Service A
+  service_b:
+    build:
+      context: .
+      dockerfile: service_b/Dockerfile
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./service_b:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    depends_on:
+      - service_a # ให้ Service A เริ่มต้นทำงานก่อน
+
+  # Service C: ทำหน้าที่เป็น REST Client ของ Service A
+  service_c:
+    build:
+      context: .
+      dockerfile: service_c/Dockerfile
+    ports:
+      - "8002:8002"
+    volumes:
+      - ./service_c:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    depends_on:
+      - service_a
